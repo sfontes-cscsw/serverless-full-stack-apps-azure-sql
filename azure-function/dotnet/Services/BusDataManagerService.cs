@@ -13,6 +13,10 @@ public sealed class BusDataManagerService : IBusDataManagerService
         (_log, _client, _options) =
             (log, client, options.Value);
 
+    public async Task HelloWorld()
+    {
+        _log.LogInformation("Hello world");
+    }
     public async Task ProcessBusDataAsync()
     {
         // Get the real-time bus location feed
